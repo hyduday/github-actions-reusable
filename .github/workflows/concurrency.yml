@@ -1,0 +1,21 @@
+name: concurrency -job 
+on: 
+ push:
+  branches:
+  - main
+
+concurrency:
+ group: production-deploy-${{ github.ref }}
+ cancel-in-progress: true
+
+jobs:
+  get-api-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code 
+        uses: actions/checkout@v3
+      - name: print message
+        run: |
+         echo "Hellow world!"   
+         sleep 20
+         echo "this is final message"
