@@ -10,6 +10,6 @@ jobs:
         id: callapi
         run: |
           response=$(curl -s https://api.github.com/repos/actions/runner/releases/latest)
-          echo "Response: $response"
+          echo "Response tag_name: $(response)|jq -r tag_name"
           response2=$(curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest)
-          echo "Response terarform: $response2"
+          echo "Response terraform tag_name: $(response2)|jq -r tag_name"
