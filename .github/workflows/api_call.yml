@@ -11,3 +11,5 @@ jobs:
         run: |
           response=$(curl -s https://api.github.com/repos/actions/runner/releases/latest)
           echo "Response: $response"
+          response2=$(curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest)
+          echo "Response terarform: $response2"
