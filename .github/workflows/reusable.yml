@@ -6,4 +6,4 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: print hello message
-     run: echo "hello mthis is reusable-workflow" 
+     run: echo "hello this is reusable-workflow" 
